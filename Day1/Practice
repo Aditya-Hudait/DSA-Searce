@@ -16,3 +16,211 @@ for(i=0;i<5; i++)
 printf("\n%d", a[i]);
 }
 }
+
+//Insertion in beginning
+
+#include<stdio.h>
+
+int main()
+
+{
+
+    int array[10], n,i, item;
+
+    printf("Enter the size of array: ");
+
+     scanf("%d", &n);
+
+    printf("\nEnter Elements in array: ");
+
+        for(i=0;i<n;i++)
+
+        {
+
+         scanf("%d", &array[i]);
+
+        }
+
+    printf("\n enter the element at the beginning");
+
+    scanf("%d", &item);
+
+    n++;
+
+    for(i=n; i>1; i--)
+
+    {
+
+      array[i-1]=array[i-2];
+
+    }
+
+    array[0]=item;
+
+    printf("resultant array element");
+
+    for(i=0;i<n;i++)
+
+    {
+
+     printf("\n%d", array[i]);
+
+    }
+
+    getch();
+
+    return 0;
+
+}
+
+//Insertion in end
+
+#include<stdio.h>
+
+#include<conio.h>
+
+int main()
+
+{
+
+int array[10], i, values;
+
+printf("Enter 5 Array Elements: ");
+
+for(i=0; i<5; i++)
+
+     scanf("%d", &array[i]);
+
+printf("\nEnter Element to Insert: ");
+
+scanf("%d", &values);
+
+array[i] = values;
+
+printf("\nThe New Array is:\n");
+
+for(i=0; i<6; i++)
+
+     printf("%d ", array[i]);
+
+getch();
+
+return 0;
+
+}
+
+//Deletion in beginning
+
+#include<stdio.h>
+
+int main()
+
+{
+
+    int n,array[10];
+
+    printf("enter the size of an array");
+
+    scanf("%d" ,&n);
+
+    printf("enter elements in an array");
+
+    for(int i=0;i<n;i++)
+
+        scanf("%d", &array[i]);
+
+    n--;
+
+    for(int i=0;i<n;i++)
+
+     array[i]=array[i+1];
+
+    printf("\nafter deletion ");
+
+     for(int i=0;i<n;i++)
+
+     printf("\n%d" , array[i]);
+
+}
+
+//Deletion in end
+
+#include<stdio.h>
+
+int main()
+
+{
+
+int n,array[10];
+
+printf("enter the size of an array");
+
+scanf("%d" ,&n);
+
+printf("enter elements in an array");
+
+for(int i=0;i<n;i++)
+
+scanf("%d", &array[i]);
+
+printf("\nafter deletion array elements are");
+
+for(int i=0;i<n-1;i++)
+
+printf("\n%d" , array[i]);
+
+}
+
+//Sorting
+
+#include <stdio.h>
+
+void main()
+
+{
+
+        int temp, size, array[100];
+
+        printf("Enter the size \n");
+
+        scanf("%d", &size);
+
+        printf("Enter the numbers \n");
+
+        for (int i = 0; i < size; ++i)
+
+         scanf("%d", &array[i]);
+
+        for (int i = 0; i < size; ++i)
+
+        {
+
+          for (int j = i + 1; j < size; ++j)
+
+         {
+
+             if (array[i] > array[j])
+
+         {
+
+                 temp = array[i];
+
+                 array[i] = array[j];
+
+                 array[j] = temp;
+
+          }
+
+         }
+
+        }
+
+      printf("sorted array:\n");
+
+       for (int i = 0; i < size; ++i)
+
+         printf("%d\n", array[i]);
+
+ }
+
+
