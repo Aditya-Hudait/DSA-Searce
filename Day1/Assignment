@@ -35,3 +35,19 @@ int main()
 
 //2nd question
 
+#include <stdio.h> 
+#include <stdlib.h>
+
+struct node {
+int data;
+struct node *link;
+};
+
+int main() { 
+struct node *head = malloc(sizeof(struct node)); 
+head->data = First Node; 
+head->link = NULL;
+
+return 0;
+}
+
